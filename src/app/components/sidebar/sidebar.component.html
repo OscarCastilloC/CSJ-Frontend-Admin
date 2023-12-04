@@ -1,0 +1,41 @@
+  <!-- Navbar-->
+  <header class="navbar navbar-expand navbar-light fixed-top navbar-box-shadow bg-light px-3 px-lg-4" data-scroll-header data-fixed-element>
+    <a class="navbar-brand d-lg-none" href="dev-setup.html">
+      <img src="https://blobtesis.blob.core.windows.net/tesis/280518527_5260851140647373_1647433766843110969_n.jpg" width="130">
+    </a>
+    <button class="navbar-toggler d-block d-lg-none mr-3 ml-auto" type="button" data-toggle="offcanvas" data-target="componentsNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <ul class="navbar-nav ml-auto d-none d-lg-flex align-items-center">
+
+      <li class="nav-item">
+        <button type="button" class="btn btn-danger" (click)="logout()">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-fill-x" viewBox="0 0 16 16">
+          <path d="M11 5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Zm-9 8c0 1 1 1 1 1h5.256A4.493 4.493 0 0 1 8 12.5a4.49 4.49 0 0 1 1.544-3.393C9.077 9.038 8.564 9 8 9c-5 0-6 3-6 4Z"></path>
+          <path d="M12.5 16a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7Zm-.646-4.854.646.647.646-.647a.5.5 0 0 1 .708.708l-.647.646.647.646a.5.5 0 0 1-.708.708l-.646-.647-.646.647a.5.5 0 0 1-.708-.708l.647-.646-.647-.646a.5.5 0 0 1 .708-.708Z"></path>
+          </svg>
+          Cerrar Sesión
+        </button>
+      </li>
+ 
+    </ul>
+  </header>
+
+   <!-- Side navigation (Off-canvas)-->
+   <aside class="cs-offcanvas cs-offcanvas-expand bg-dark" id="componentsNav">
+    <div class="cs-offcanvas-cap d-none d-lg-block py-4">
+      <a class="navbar-brand py-2" href="dev-setup.html">
+        <img src="https://blobtesis.blob.core.windows.net/tesis/coop-icon.jpg" style="border-radius: 20px;" alt="San Jorge" width="100%">
+      </a>
+    </div>
+    <div class="cs-offcanvas-body px-0 pt-4 pb-grid-gutter" data-simplebar data-simplebar-inverse>
+      <h6 class="font-size-lg text-light px-4 mt-2 mb-3">Contenido</h6>
+      <hr class="hr-gradient hr-light mb-2 opacity-25">
+      <nav class="nav nav-light">
+        <a class="nav-link px-4" [routerLink]="['/inicio']" routerLinkActive="active">Inicio</a>
+        <a class="nav-link px-4" [routerLink]="['/panel/socios']" routerLinkActive="active">Socios</a>
+        <a class="nav-link px-4" [routerLink]="['/panel/solicitudes']" routerLinkActive="active">Solicitudes</a>
+        <!--<a class="nav-link px-4" [routerLink]="['/panel/configuraciones']" routerLinkActive="active">Configuraciones</a>-->
+      </nav>
+    </div>
+  </aside>

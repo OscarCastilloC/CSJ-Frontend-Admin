@@ -1,0 +1,154 @@
+.modal-background {
+    background: linear-gradient(to right top, #eae0c8, #070a1d);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .modal-container {
+    display: flex;
+    max-width: 720px;
+    width: 100%;
+    border-radius: 10px;
+    position: absolute;
+    opacity: 1;
+    pointer-events: auto;
+    transition-duration: 0.3s;
+    transform: translateY(0) scale(1);
+    background: #fff;
+  }
+
+  .modal-title {
+    font-size: 26px;
+    font-weight: 400;
+    color: #55311c;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .modal-desc {
+    margin: 6px 0 30px 0;
+    font-family: BlinkMacSystemFont, -apple-system, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+    color: rgb(74, 74, 74);
+    font-size: 16px;
+    font-weight: 400;
+    text-rendering: optimizeLegibility;
+    text-size-adjust: 100%;
+    margin-bottom: 10px;
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+  }
+
+  .modal-left {
+    padding: 20px 30px 20px;
+    background: #fff;
+    flex: 1.5;
+    transition-duration: 0.5s;
+    transform: translateY(0);
+    opacity: 1;
+    border-radius: 15px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+
+  .modal-right {
+    margin-left: 20px;
+  }
+  
+  .modal-right img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition-duration: 1.2s;
+    transform: scale(1);
+    overflow-clip-margin: content-box;
+    overflow: clip;
+    border-radius: 9px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    padding: 10px 10px 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    transition: 0.3s;
+    font-size: 20px;
+    color: #999;
+  }
+
+  .form-group:focus-within {
+    border-color: #8c7569;
+  }
+
+  .form-group label {
+    font-size: 11px;
+    text-transform: uppercase;
+    font-family: "Nunito", sans-serif;
+    font-weight: bold;
+    letter-spacing: 0.7px;
+    color: #8c7569;
+    transition: 0.3s;
+  }
+
+  .form-group input {
+    outline: 0;
+    border: 0;
+    padding: 4px 0;
+    font-size: 14px;
+    font-family: "Nunito", sans-serif;
+    width: 300px;
+    height: 20px;
+  }
+
+  .form-group input::placeholder {
+    color: #ccc;
+    opacity: 1;
+    font-style: italic;
+  }
+
+  .modal-buttons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .modal-buttons a {
+    color: rgba(51, 51, 51, 0.6);
+    font-size: 14px;
+  }
+  
+  .modal-buttons a:hover {
+    text-decoration: underline;
+  }
+
+  .input-button {
+    padding: 8px 12px;
+    outline: none;
+    border: 0;
+    color: #fff;
+    border-radius: 4px;
+    background: #8c7569;
+    font-family: "Nunito", sans-serif;
+    transition: 0.3s;
+    cursor: pointer;
+  }
+  
+  .input-button:hover {
+    background: #55311c;
+  }
+
+

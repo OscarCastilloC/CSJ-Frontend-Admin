@@ -1,0 +1,70 @@
+/* Custom switch checkbox styles */
+.switch-checkbox {
+    display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  }
+  
+  .switch-checkbox__input {
+    display: none;
+  }
+  
+  .switch-checkbox__label {
+    display: block;
+  width: 40px; /* Ancho del botón */
+  height: 20px; /* Altura del botón */
+  border-radius: 10px; /* Redondear el botón */
+  background-color: #ccc; /* Color de fondo del botón */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+  z-index: 1;
+  }
+  
+  .switch-checkbox__input:checked + .switch-checkbox__label {
+    background-color: #4CAF50; /* Color when checked */
+  }
+
+  .switch-checkbox__input:not(:checked) + .switch-checkbox__label {
+    background-color: #FF6B6B; /* Color rojo cuando está desactivado */
+  }
+  
+  .status__text {
+    position: absolute;
+  overflow: hidden;
+  clip: rect(0 0 0 0); /* Técnica para ocultar texto */
+  height: 1px; /* Asegura que el texto no ocupe espacio */
+  width: 1px; /* Asegura que el texto no ocupe espacio */
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  display: inline-block;
+  margin-left: 10px; /* Espacio entre el switch y el texto */
+  font-size: 14px;
+  color: #333;
+  }
+  
+  /* Slider style for the switch */
+  .switch-checkbox__label:after {
+    content: '';
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 16px; /* Ancho del botón deslizante */
+    height: 16px; /* Altura del botón deslizante */
+    border-radius: 50%; /* Forma del botón deslizante */
+    background-color: white; /* Color del botón deslizante */
+    transition: transform 0.3s ease;
+  }
+  
+  .switch-checkbox__input:checked + .switch-checkbox__label:after {
+    transform: translateX(20px); /* Move the knob to the right */
+  }
+
+/* Estilo para texto desactivado */
+.desactivado-text {
+    color: rgba(51, 51, 51, 0.5); /* Color de texto desaturado */
+  }

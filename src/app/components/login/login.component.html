@@ -1,0 +1,42 @@
+<div class="row" style="width: 100%; height: 100%; margin-top: 80px;">
+  <div class="col-lg-7 mx-auto" style="display: flex; align-items: center;">
+    <div class="modal-body px-md-5 px-4">
+      
+      <form #loginForm="ngForm" (ngSubmit)="login(loginForm)"> 
+        <div class="modal-background">
+          <app-background></app-background>
+          <div class="modal-container">
+            <div class="modal-left">
+              <h1 class="modal-title">Bienvenido</h1>
+              <p class="modal-desc">Cooperativa San Jorge</p>
+              <div class="form-group">
+                <label for="signin-email">Correo electrónico</label>
+                <input type="email" class="form-control" name="email" [(ngModel)]="user.email" placeholder="Correo electrónico" required="">
+              </div>
+              <div class="form-group">
+                <label for="signin-password" class="form-label">Contraseña</label>
+                <div class="cs-password-toggle input-group-overlay">
+                  <input type="password" class="form-control appended-form-control" name="password" [(ngModel)]="user.password" placeholder="Contraseña" required="" #passwordInput>
+                  <div class="input-group-append-overlay">
+                    <label class="btn cs-password-toggle-btn input-group-text">
+                      <input type="checkbox" class="custom-control-input" (change)="togglePassword()">
+                      <i class="cxi-eye cs-password-toggle-indicator"></i>
+                      <span class="sr-only">Mostrar contraseña</span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+              <div class="modal-buttons">
+                <a href="" class="forgot-password-button">Olvidó la contraseña?</a>
+                <button type="submit" class="input-button">Iniciar sesión</button>
+              </div>
+            </div>
+            <div class="modal-right">
+              <img src="https://blobtesis.blob.core.windows.net/tesis/bogar18_Design_an_image_emphasizing_an_individuals_vision_for_m_d86292c2-27a3-448a-a13f-38d4fb3ab3f2.png" alt="">
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
